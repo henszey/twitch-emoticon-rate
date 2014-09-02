@@ -1,0 +1,1258 @@
+{
+  "_links": {
+    "self": "https://api.twitch.tv/kraken/chat/emoticons"
+  },
+  "emoticons": [
+    {
+      "regex": "༼ つ ◕_◕ ༽つ",
+      "images": [
+        {
+          "width": 27.0,
+          "height": 28.0,
+          "url": "assets/give.png"
+        }
+      ]
+    },
+    
+    
+    {
+      "regex": "༼ຈل͜ຈ༽",
+      "images": [
+        {
+          "width": 27.0,
+          "height": 28.0,
+          "url": "assets/donger.png"
+        }
+      ]
+    },
+    
+    
+    {
+      "regex": "( ͡° ͜ʖ ͡°)",
+      "images": [
+        {
+          "width": 27.0,
+          "height": 28.0,
+          "url": "assets/lenny.png"
+        }
+      ]
+    },
+    {
+      "regex": "༼ಠ益ಠ༽",
+      "images": [
+        {
+          "width": 27.0,
+          "height": 28.0,
+          "url": "assets/rager.png"
+        }
+      ]
+    },
+    {
+      "regex": "ಠ_ಠ",
+      "images": [
+        {
+          "width": 27.0,
+          "height": 28.0,
+          "url": "assets/disapoint.png"
+        }
+      ]
+    },
+
+    {
+      "regex": "AMENO",
+      "images": [
+        {
+          "width": 27.0,
+          "height": 28.0,
+          "url": "assets/ameno.png"
+        }
+      ]
+    },
+    
+    
+    {
+      "regex": "DUDU",
+      "images": [
+        {
+          "width": 27.0,
+          "height": 28.0,
+          "url": "assets/dudu.png"
+        }
+      ]
+    },
+    
+    
+    
+    
+    
+    {
+      "regex": "MOLLY",
+      "color" : "#00FF00",
+      "images": [
+        {
+          "width": 27.0,
+          "height": 28.0,
+          "url": "assets/molly.png"
+        }
+      ]
+    },
+    {
+      "regex": "REKT",
+      "color" : "#f7a35c",
+      "images": [
+        {
+          "width": 27.0,
+          "height": 28.0,
+          "url": "assets/rekt.png"
+        }
+      ]
+    },
+    {
+      "regex": "RIOT",
+      "color" : "#f15c80",
+      "images": [
+        {
+          "width": 27.0,
+          "height": 28.0,
+          "url": "assets/riot.png"
+        }
+      ]
+    },
+    {
+      "regex": "GG",
+      "color" : "#009912",
+      "images": [
+        {
+          "width": 27.0,
+          "height": 28.0,
+          "url": "assets/gg.png"
+        }
+      ]
+    },
+    
+    
+    
+    
+   
+    
+    
+    {
+      "regex": "Volcania",
+      "images": [
+        {
+          "width": 27.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-efbcc231b2d2d206-27x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "DatSheffy",
+      "images": [
+        {
+          "width": 24.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-bf13a0595ecf649c-24x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "DAESuppy",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-ef2a16bdc037bc91-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "JKanStyle",
+      "images": [
+        {
+          "width": 21.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-3a7ee1bc0e5c9af0-21x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "OptimizePrime",
+      "images": [
+        {
+          "width": 22.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-41f8a86c4b15b5d8-22x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "StoneLightning",
+      "images": [
+        {
+          "width": 20.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-8b5aaae6e2409deb-20x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "TheRinger",
+      "images": [
+        {
+          "width": 20.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-1903cc415afc404c-20x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "PazPazowitz",
+      "images": [
+        {
+          "width": 18.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-521420789e1e93ef-18x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "WinWaker",
+      "images": [
+        {
+          "width": 30.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-d4e971f7a6830e95-30x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "TriHard",
+      "images": [
+        {
+          "width": 24.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-6407e6947eb69e21-24x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "EagleEye",
+      "images": [
+        {
+          "width": 18.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-95eb8045e7ae63b8-18x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "CougarHunt",
+      "images": [
+        {
+          "width": 21.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-551cd64fc3d4590a-21x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "RedCoat",
+      "images": [
+        {
+          "width": 19.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-6b8d1be08f244e92-19x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "Kappa",
+      "color" : "#7cb5ec",
+      "images": [
+        {
+          "width": 25.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-ddc6e3a8732cb50f-25x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "JonCarnage",
+      "images": [
+        {
+          "width": 20.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-6aaca644ea5374c6-20x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "PicoMause",
+      "images": [
+        {
+          "width": 22.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-ce027387c35fb601-22x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "MrDestructoid",
+      "images": [
+        {
+          "width": 39.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-ac61a7aeb52a49d3-39x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "BCWarrior",
+      "images": [
+        {
+          "width": 29.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-1e3ccd969459f889-29x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "SuperVinlin",
+      "images": [
+        {
+          "width": 23.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-92a1b848540e9347-23x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "DansGame",
+      "images": [
+        {
+          "width": 25.0,
+          "height": 32.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-ce52b18fccf73b29-25x32.png"
+        }
+      ]
+    },
+    {
+      "regex": "SwiftRage",
+      "images": [
+        {
+          "width": 21.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-680b6b3887ef0d17-21x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "PJSalt",
+      "color" : "#91e8e1",
+      "images": [
+        {
+          "width": 36.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-18be1a297459453f-36x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "StrawBeary",
+      "images": [
+        {
+          "width": 20.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-3dac9659e838fab2-20x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "BlargNaut",
+      "images": [
+        {
+          "width": 21.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-a5293e92212cadd9-21x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "FreakinStinkin",
+      "images": [
+        {
+          "width": 19.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-d14278fea8fad146-19x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "KevinTurtle",
+      "color" : "#4433FF",
+      "images": [
+        {
+          "width": 21.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-d530ef454aa17093-21x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "Kreygasm",
+      "color" : "#e4d354",
+      "images": [
+        {
+          "width": 19.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-3a624954918104fe-19x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "FPSMarksman",
+      "images": [
+        {
+          "width": 20.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-6c26a3f04616c4bf-20x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "NoNoSpot",
+      "images": [
+        {
+          "width": 23.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-179f310b0746584d-23x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "NinjaTroll",
+      "images": [
+        {
+          "width": 19.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-89e474822a976928-19x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "SSSsss",
+      "images": [
+        {
+          "width": 24.0,
+          "height": 24.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-5d019b356bd38360-24x24.png"
+        }
+      ]
+    },
+    {
+      "regex": "PunchTrees",
+      "images": [
+        {
+          "width": 24.0,
+          "height": 24.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-b85003ffba04e03e-24x24.png"
+        }
+      ]
+    },
+    {
+      "regex": "TehFunrun",
+      "images": [
+        {
+          "width": 27.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-a204e65775b969c5-27x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "UleetBackup",
+      "images": [
+        {
+          "width": 17.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-5342e829290d1af0-17x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "ArsonNoSexy",
+      "images": [
+        {
+          "width": 18.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-e13a8382e40b19c7-18x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "SMSkull",
+      "images": [
+        {
+          "width": 24.0,
+          "height": 24.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-50b9867ba05d1ecc-24x24.png"
+        }
+      ]
+    },
+    {
+      "regex": "SMOrc",
+      "images": [
+        {
+          "width": 32.0,
+          "height": 32.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-9f276ed33053ec70-32x32.png"
+        }
+      ]
+    },
+    {
+      "regex": "MVGame",
+      "images": [
+        {
+          "width": 24.0,
+          "height": 32.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-1a1a8bb5cdf6efb9-24x32.png"
+        }
+      ]
+    },
+    {
+      "regex": "FuzzyOtterOO",
+      "images": [
+        {
+          "width": 26.0,
+          "height": 26.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-d141fc57f627432f-26x26.png"
+        }
+      ]
+    },
+    {
+      "regex": "GingerPower",
+      "images": [
+        {
+          "width": 21.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-2febb829eae08b0a-21x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "BionicBunion",
+      "images": [
+        {
+          "width": 30.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-740242272832a108-30x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "FrankerZ",
+      "images": [
+        {
+          "width": 40.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-3b96527b46b1c941-40x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "OneHand",
+      "images": [
+        {
+          "width": 20.0,
+          "height": 27.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-b6d67569a0c6340a-20x27.png"
+        }
+      ]
+    },
+    {
+      "regex": "TinyFace",
+      "images": [
+        {
+          "width": 19.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-b93007bc230754e1-19x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "HassanChop",
+      "images": [
+        {
+          "width": 19.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-22c6299e539344a9-19x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "BloodTrail",
+      "images": [
+        {
+          "width": 41.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-f124d3a96eff228a-41x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "TheTarFu",
+      "images": [
+        {
+          "width": 25.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-1fcfa48228bbd6ea-25x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "UnSane",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-4eea6f01e372a996-28x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "EvilFetus",
+      "images": [
+        {
+          "width": 29.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-484439fc20e0d36d-29x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "DBstyle",
+      "images": [
+        {
+          "width": 21.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-1752876c0d0ec35f-21x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "AsianGlow",
+      "images": [
+        {
+          "width": 24.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-a3708d1e15c3f197-24x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "BibleThump",
+      "color" : "#E8D015",
+      "images": [
+        {
+          "width": 36.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-f6c13c7fc0a5c93d-36x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "ShazBotstix",
+      "images": [
+        {
+          "width": 24.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-ccaf06d02a01a804-24x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "PogChamp",
+      "color" : "#8d4653",
+      "images": [
+        {
+          "width": 23.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-60aa1af305e32d49-23x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "Jebaited",
+      "images": [
+        {
+          "width": 21.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-39dff1bb9b42cf38-21x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "OMGScoots",
+      "images": [
+        {
+          "width": 22.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-e01723a9ae4fbd8b-22x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "PMSTwin",
+      "images": [
+        {
+          "width": 23.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-a33f6c484c27e249-23x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "ItsBoshyTime",
+      "images": [
+        {
+          "width": 18.0,
+          "height": 18.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-e8e0b0c4e70c4fb8-18x18.png"
+        }
+      ]
+    },
+    {
+      "regex": "BORT",
+      "images": [
+        {
+          "width": 19.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-6f9fa95e9e3d6a69-19x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "FUNgineer",
+      "images": [
+        {
+          "width": 24.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-731296fdc2d37bea-24x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "ResidentSleeper",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-1ddcc54d77fc4a61-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "4Head",
+      "images": [
+        {
+          "width": 20.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-76292ac622b0fc38-20x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "SoonerLater",
+      "images": [
+        {
+          "width": 23.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-696192d9891880af-23x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "OpieOP",
+      "images": [
+        {
+          "width": 21.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-21e708123d6a896d-21x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "HotPokket",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-55873089390f4a10-28x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "Poooound",
+      "images": [
+        {
+          "width": 21.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-61a08075ecef6afa-21x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "TooSpicy",
+      "images": [
+        {
+          "width": 23.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-f193772ca6e512f2-23x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "FailFish",
+      "color" : "#8085e9",
+      "images": [
+        {
+          "width": 22.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-c8a77ec0c49976d3-22x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "RuleFive",
+      "images": [
+        {
+          "width": 20.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-4e65703c52fb67b5-20x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "BrainSlug",
+      "images": [
+        {
+          "width": 30.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-d8eee0a259b7dfaa-30x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "WTRuck",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-f9ee1c9eb52375de-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "ThunBeast",
+      "images": [
+        {
+          "width": 26.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-1bae8ebfe6209a0c-26x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "BigBrother",
+      "images": [
+        {
+          "width": 24.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-63c10b84aaddd77c-24x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "TF2John",
+      "images": [
+        {
+          "width": 22.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-ffa884123ef70519-22x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "BatChest",
+      "images": [
+        {
+          "width": 18.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-df8ac34ab89d8c0c-18x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "RalpherZ",
+      "images": [
+        {
+          "width": 33.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-3d9b59b17687288c-33x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "SoBayed",
+      "images": [
+        {
+          "width": 24.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-efca3da7a499ac81-24x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "Kippa",
+      "images": [
+        {
+          "width": 24.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-56a84f0e87c3d3a5-24x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "Keepo",
+      "color" : "#8085e8",
+      "images": [
+        {
+          "width": 27.0,
+          "height": 29.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-8eed21805f6217ce-27x29.png"
+        }
+      ]
+    },
+    {
+      "regex": "WholeWheat",
+      "images": [
+        {
+          "width": 20.0,
+          "height": 30.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-89a30a213fe46f49-20x30.png"
+        }
+      ]
+    },
+    {
+      "regex": "DogFace",
+      "images": [
+        {
+          "width": 22.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-d0134a612162a147-22x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "PeoplesChamp",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-3412-src-76b6e3c79b31b696-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "GrammarKing",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-3632-src-c3bf1bef4de9bb99-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "UncleNox",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-3666-src-19af357000ae2b42-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "PanicVis",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-3668-src-f36f5a70b1c93a29-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "aneleanele",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-3792-src-1504dbbe3760173a-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "BrokeBack",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-4057-src-770e3d6c306dda14-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "PipeHype",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-4240-src-d0c560fa27408dc7-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "YouWHY",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-4337-src-abba134ff81d77c7-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "RitzMitz",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-4338-src-a741c02562405936-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "EleGiggle",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-4339-src-07433e94eae8754e-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "KZassault",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-5248-src-914192574ba9feec-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "KZguerilla",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-5250-src-da9dd1029955070e-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "KZcover",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-5249-src-c649b1d10e887587-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "KZhelghast",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-5251-src-a1596431098da5d4-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "KZowl",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-5252-src-437c1b59f74e39bc-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "KZskull",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-5253-src-7358e7adaec32ecc-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "TheThing",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-7427-src-f1278d0b66848536-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "AtWW",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-9801-src-3d2087b69c5c5c6b-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "Shazam",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-9807-src-4444736c1440cb77-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "GasJoker",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-9802-src-6e8eaf7c9777fbf8-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "PJHarley",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-9808-src-e9e3212e738f3370-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "MechaSupes",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-9804-src-5b096e8d2ec67fbf-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "shazamicon",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-9806-src-973c438f0fd31151-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "AtIvy",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-9800-src-b27b39cd614d1791-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "KAPOW",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-9803-src-4b786d2bb9b6162a-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "NightBat",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-9805-src-5346ae35c2a450e5-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "AtGL",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-9809-src-52738249ed340b6a-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "noScope420",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-13084-src-d20453d53c23a780-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "SriHead",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-14706-src-0867051c194fc3f1-28x28.png"
+        }
+      ]
+    },
+    {
+      "regex": "HassaanChop",
+      "images": [
+        {
+          "width": 28.0,
+          "height": 28.0,
+          "url": "http://static-cdn.jtvnw.net/jtv_user_pictures/emoticon-20225-src-cf62346ed09bb4c3-28x28.png"
+        }
+      ]
+    }
+  ]
+}

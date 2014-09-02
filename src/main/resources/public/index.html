@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html ng-app="trader">
+<head>
+<title>Hello WebSocket</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.13/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.13/angular-resource.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.13/angular-route.min.js"></script>
+
+<script src="reconnecting-websocket.js"></script>
+
+<link
+  rel="stylesheet"
+  href="main.css">
+</head>
+<script
+  type="text/javascript"
+  src="main.js"></script>
+
+<body ng-controller="TraderCtrl">
+
+
+  <table>
+    <tr>
+      <td valign="top" style="height: 288px;">
+        <canvas
+          id="c"
+          style="width: 1050px; height: 288px; background-color: black; border-radius: 5px; border: 1px solid black;"
+          width="1050px"
+          height="288px">
+  </canvas>
+      </td>
+      <td
+        valign="top"
+        rowspan="2">
+        <span style="font-weight:bold;font-size: larger;">Kappa Per Minute</span>
+        <table class="price-table">
+          <tr ng-repeat="price in prices track by price.emoticon">
+            <!-- ng-style="{'-webkit-animation':'yellow-fade 1s'}" -->
+            <td class="price-img-col"><img ng-src="{{emoticonMap[price.emoticon].images[0].url}}"></td>
+            <td class="price-price-col">{{price.price}}</td>
+            <td
+              class="price-description-col"
+              ng-style="{'color' : emoticonMap[price.emoticon].color}">{{emoticonMap[price.emoticon].regex}}</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td valign="top">
+        
+        
+        <table>
+          <tr>
+            <td valign="top">
+                    <table class="price-table">
+          <tr ng-repeat="channelData in channelDatas track by channelData.channel">
+            <td class="price-img-col"><img ng-src="{{emoticonMap[channelData.topEmote].images[0].url}}"></td>
+            <td class="price-price-col">{{channelData.topEmoteCount}}</td>
+            <td class="price-description-col"><a href="http://www.twitch.tv/{{channelData.channel}}" target="_blank">{{channelData.channel}}</a></td>
+          </tr>
+        </table>
+            </td>
+            <td valign="top">
+              Market Status: {{marketStatus}}
+            </td>
+          </tr>
+        </table>
+
+        
+      </td>
+    </tr>
+  </table>
+
+
+  <img ng-show="spiker != null" ng-src="{{emoticonMap[spiker.emoticon].images[0].url}}" class="spaz-image" style="left:10%">
+  <img ng-show="spiker != null" ng-src="{{emoticonMap[spiker.emoticon].images[0].url}}"  class="spaz-image" style="left:30%">
+  <img ng-show="spiker != null" ng-src="{{emoticonMap[spiker.emoticon].images[0].url}}"  class="spaz-image" style="left:50%">
+  <img ng-show="spiker != null" ng-src="{{emoticonMap[spiker.emoticon].images[0].url}}"  class="spaz-image" style="left:70%">
+
+
+
+
+
+</body>
+</html>
