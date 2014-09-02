@@ -1,7 +1,4 @@
 {
-  "_links": {
-    "self": "https://api.twitch.tv/kraken/chat/emoticons"
-  },
   "emoticons": [
     {
       "regex": "༼ つ ◕_◕ ༽つ",
@@ -9,7 +6,7 @@
         {
           "width": 27.0,
           "height": 28.0,
-          "url": "assets/give.png"
+          "url": "assets/txt.png"
         }
       ]
     },
@@ -21,7 +18,7 @@
         {
           "width": 27.0,
           "height": 28.0,
-          "url": "assets/donger.png"
+          "url": "assets/txt.png"
         }
       ]
     },
@@ -33,7 +30,7 @@
         {
           "width": 27.0,
           "height": 28.0,
-          "url": "assets/lenny.png"
+          "url": "assets/txt.png"
         }
       ]
     },
@@ -43,7 +40,7 @@
         {
           "width": 27.0,
           "height": 28.0,
-          "url": "assets/rager.png"
+          "url": "assets/txt.png"
         }
       ]
     },
@@ -53,7 +50,7 @@
         {
           "width": 27.0,
           "height": 28.0,
-          "url": "assets/disapoint.png"
+          "url": "assets/txt.png"
         }
       ]
     },
@@ -64,7 +61,7 @@
         {
           "width": 27.0,
           "height": 28.0,
-          "url": "assets/ameno.png"
+          "url": "assets/txt.png"
         }
       ]
     },
@@ -76,7 +73,7 @@
         {
           "width": 27.0,
           "height": 28.0,
-          "url": "assets/dudu.png"
+          "url": "assets/txt.png"
         }
       ]
     },

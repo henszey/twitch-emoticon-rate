@@ -1,31 +1,25 @@
 package com.timelessname.server.conf;
 
-import org.springframework.boot.context.web.SpringBootServletInitializer;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.socket.config.annotation.EnableWebSocket;
-import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
-import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
-import org.springframework.web.socket.handler.PerConnectionWebSocketHandler;
-
-import com.timelessname.server.socket.WebSocketHandler;
+import org.springframework.messaging.simp.config.MessageBrokerRegistry;
+import org.springframework.web.socket.config.annotation.AbstractWebSocketMessageBrokerConfigurer;
+import org.springframework.web.socket.config.annotation.EnableWebSocketMessageBroker;
+import org.springframework.web.socket.config.annotation.StompEndpointRegistry;
 
 
 @Configuration
-@EnableWebSocket
-public class WebSocketConfig extends SpringBootServletInitializer implements WebSocketConfigurer {
+@EnableWebSocketMessageBroker
+public class WebSocketConfig  extends AbstractWebSocketMessageBrokerConfigurer {
 
   @Override
-  public void registerWebSocketHandlers(WebSocketHandlerRegistry registry) {
-    registry.addHandler(webSocketHandler(), "/socket");//.withSockJS();
-  }
-  
-  @Bean
-  public PerConnectionWebSocketHandler webSocketHandler() {
-    //return new EchoWebSocketHandler();
-    return new PerConnectionWebSocketHandler(WebSocketHandler.class);
+  public void registerStompEndpoints(StompEndpointRegistry registry) {
+    registry.addEndpoint("/socket").withSockJS();
   }
 
-
+  @Override
+  public void configureMessageBroker(MessageBrokerRegistry registry) {
+    registry.enableSimpleBroker("/queue/", "/topic/");
+    registry.setApplicationDestinationPrefixes("/app");
+  }
 
 }

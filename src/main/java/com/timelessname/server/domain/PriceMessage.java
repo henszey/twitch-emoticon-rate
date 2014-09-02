@@ -6,7 +6,7 @@ public class PriceMessage {
 
   long time;
 
-  List<EmoticonPrice> prices;
+  List<EmoticonRate> prices;
 
   public long getTime() {
     return time;
@@ -16,11 +16,11 @@ public class PriceMessage {
     this.time = time;
   }
 
-  public List<EmoticonPrice> getPrices() {
+  public List<EmoticonRate> getPrices() {
     return prices;
   }
 
-  public void setPrices(List<EmoticonPrice> prices) {
+  public void setPrices(List<EmoticonRate> prices) {
     this.prices = prices;
   }
 

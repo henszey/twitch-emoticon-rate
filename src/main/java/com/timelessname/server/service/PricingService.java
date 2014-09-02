@@ -2,47 +2,46 @@ package com.timelessname.server.service;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
-import java.util.TreeMap;
 
 import javax.annotation.Resource;
 
-import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.core.MessageSendingOperations;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
+import com.google.common.collect.Maps;
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
 import com.timelessname.server.domain.ChannelData;
 import com.timelessname.server.domain.Emoticon;
 import com.timelessname.server.domain.EmoticonPrice;
-import com.timelessname.server.domain.Message;
+import com.timelessname.server.domain.EmoticonRate;
 
 @Service
 public class PricingService {
 
+  @Autowired
+  protected MessageSendingOperations<String> messagingTemplate;
+    
   @Resource
-  Map<String, Emoticon> emoticonMap;
+  protected Map<String, Emoticon> emoticonMap;
 
   @Resource
-  List<String> emoticonList;
+  protected List<String> emoticonList;
 
-  protected Map<String, List<Long>> emoticonTimes = new HashMap<String, List<Long>>();
+  protected Gson gson = new Gson();
 
-  protected Map<String, Map<String, List<Long>>> channelMemeTimes = new HashMap<String, Map<String, List<Long>>>();
-
-  Gson gson = new Gson();
-
-  List<EmoticonPrice> emoticonPrices;
+  List<EmoticonRate> emoticonPrices;
 
   List<ChannelData> channelDatas;
 
-  public List<EmoticonPrice> getPrices() {
+  Map<String, EmoticonPrice> priceMap = Maps.newConcurrentMap();
+  
+  public List<EmoticonRate> getPrices() {
     return emoticonPrices;
   }
 
@@ -51,21 +50,42 @@ public class PricingService {
   }
 
   public void priceMessage(String json) {
-
-    Type listType = new TypeToken<ArrayList<EmoticonPrice>>() {
+    Type listType = new TypeToken<ArrayList<EmoticonRate>>() {
       private static final long serialVersionUID = 1L;
     }.getType();
-    emoticonPrices = gson.fromJson(json, listType);
+    List<EmoticonRate> newPrices = gson.fromJson(json, listType);
+    process(newPrices);
+  }
 
+  private void process(List<EmoticonRate> newPrices) {
+    //Map<String, EmoticonPrice> newPriceMap = Maps.newHashMap();
+    for (EmoticonRate emoticonRate : newPrices) {     
+      EmoticonPrice emoticonPrice = priceMap.get(emoticonRate.getEmoticon());
+      if(emoticonPrice == null){
+        emoticonPrice = new EmoticonPrice();
+        emoticonPrice.setEmoticon(emoticonRate.getEmoticon());
+      } 
+      if(emoticonPrice.getPrice() != emoticonRate.getPerMinute()){
+        emoticonPrice.setPrice(emoticonRate.getPerMinute());
+        messagingTemplate.convertAndSend("/topic/price.stock." + emoticonPrice.getEmoticon(), emoticonPrice);
+      }
+      
+      
+    }
+    
   }
 
   public void channelMessage(String json) {
-
     Type listType = new TypeToken<ArrayList<ChannelData>>() {
       private static final long serialVersionUID = 1L;
     }.getType();
     channelDatas = gson.fromJson(json, listType);
-
   }
 
+  @Scheduled(fixedDelay=1000)
+  public void sendQuotes() {
+
+    
+  }
+  
 }

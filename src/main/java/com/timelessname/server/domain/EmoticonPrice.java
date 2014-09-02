@@ -1,19 +1,10 @@
 package com.timelessname.server.domain;
 
-public class EmoticonPrice implements Comparable<EmoticonPrice> {
+public class EmoticonPrice {
 
-  String emoticon;
-  
-  int price;
-  
-  public EmoticonPrice(){
-    
-  }
+  protected String emoticon;
 
-  public EmoticonPrice(String emoticonKey, Integer count) {
-    this.emoticon = emoticonKey;
-    this.price = count;
-  }
+  protected int price;
 
   public String getEmoticon() {
     return emoticon;
@@ -31,11 +22,4 @@ public class EmoticonPrice implements Comparable<EmoticonPrice> {
     this.price = price;
   }
 
-  @Override
-  public int compareTo(EmoticonPrice o) {
-    return o.price - this.price;
-  }
-  
-  
-  
 }

@@ -1,5 +1,7 @@
 package com.timelessname.server.conf;
 
+import java.util.UUID;
+
 import org.springframework.amqp.core.AcknowledgeMode;
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;
@@ -20,8 +22,8 @@ public class RabbitConfig {
 
 
 
-  String priceQueueName = "twitch.main.consumer";
-  String priceExchangeName = "twitch.prices";
+  String priceQueueName = UUID.randomUUID().toString();
+  String priceExchangeName = "twitch.emoticons.rate";
 
 
   @Bean
@@ -30,13 +32,13 @@ public class RabbitConfig {
   }
 
   @Bean
-  FanoutExchange priceExchange() {
-    return new FanoutExchange(priceExchangeName,false,false);
+  TopicExchange priceExchange() {
+    return new TopicExchange(priceExchangeName,true,false);
   }
 
   @Bean
-  Binding priceBinding(Queue priceQueue, FanoutExchange priceExchange) {
-    return BindingBuilder.bind(priceQueue).to(priceExchange);
+  Binding priceBinding(Queue priceQueue, TopicExchange priceExchange) {
+    return BindingBuilder.bind(priceQueue).to(priceExchange).with("twitch.rate.emoticons");
   }
   
 
@@ -56,7 +58,7 @@ public class RabbitConfig {
   }
   
   
-  
+  /*
   String channelQueueName = "twitch.main.consumer";
   String channelExchangeName = "twitch.channelData";
 
@@ -91,7 +93,7 @@ public class RabbitConfig {
   MessageListenerAdapter channelListenerAdapter(PricingService coreService) {
     return new MessageListenerAdapter(coreService, "channelMessage");
   }
-
+*/
   
   
   

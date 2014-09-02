@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
-import com.timelessname.server.domain.EmoticonPrice;
+import com.timelessname.server.domain.EmoticonRate;
 
 @Service
 public class TradingService {
@@ -24,12 +24,12 @@ public class TradingService {
   
   @Scheduled(fixedDelay = 50)
   public void checkMarketState() {
-    List<EmoticonPrice> prices = pricingService.getPrices();
+    List<EmoticonRate> prices = pricingService.getPrices();
     if(prices == null || prices.size() == 0){
       marketOpen = false;
       return;
     }
-    if(prices.get(0).getPrice() < 100){
+    if(prices.get(0).getPerMinute() < 100){
       marketOpen = false;
       closedAt = System.currentTimeMillis();
     } else {
