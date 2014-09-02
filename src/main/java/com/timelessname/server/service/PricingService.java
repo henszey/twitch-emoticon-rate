@@ -64,6 +64,7 @@ public class PricingService {
       if(emoticonPrice == null){
         emoticonPrice = new EmoticonPrice();
         emoticonPrice.setEmoticon(emoticonRate.getEmoticon());
+        priceMap.put(emoticonPrice.getEmoticon(), emoticonPrice);
       } 
       if(emoticonPrice.getPrice() != emoticonRate.getPerMinute()){
         emoticonPrice.setPrice(emoticonRate.getPerMinute());

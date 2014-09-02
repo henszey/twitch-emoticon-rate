@@ -51,9 +51,6 @@ public class EmoticonConfig {
 
     }
 
-    // Molly
-    // GG
-
     return map;
   }
 

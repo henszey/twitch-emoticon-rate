@@ -4,11 +4,14 @@ angular.module('trader', [ 'AngularStomp' ]).controller('TraderCtrl', function($
   var allPrices = [];
   var priceMap = {};
 
+  var count = 0;
+  
   $scope.messages = [];
   $scope.client = ngstomp('/socket');
   $scope.client.connect("guest", "guest", function() {
     $scope.client.subscribe("/topic/price.stock.*", function(message) {
-
+      count++;
+      
       var priceData = JSON.parse(message.body);
       var exists = true
       if (!priceMap[priceData.emoticon]) {
@@ -18,34 +21,39 @@ angular.module('trader', [ 'AngularStomp' ]).controller('TraderCtrl', function($
       priceMap[priceData.emoticon].price = priceData.price;
       var newPrice = priceMap[priceData.emoticon];
 
-      if (!exists) {
-        if (allPrices.length == 0) {
-          allPrices[0] = (newPrice);
-        } else {
-          // TODO: binary search
-          for (var i = 0; i < allPrices.length; i++) {
-            var price = allPrices[i];
-            if (price.price < newPrice.price) {
-              allPrices.splice(i, 0, newPrice);
-              break
-            }
-            if (i == allPrices.length - 1) {
-              allPrices[allPrices.length] = (newPrice);
-              break;
-            }
+
+      if(exists){
+        for(var i = 0; i < allPrices.length; i++){
+          var price = allPrices[i];
+          if(price.emoticon == newPrice.emoticon){
+            allPrices.splice(i,1);
+            break;
           }
         }
-      } else {
-        // TODO: smarter sort
-        allPrices.sort(function(a, b) {
-          var diff = b.price - a.price;
-          if (diff == 0) {
-            diff = a.emoticon.localeCompare(b.emoticon)
-          }
-          return diff;
-        });
-        
       }
+
+      
+      
+      
+      if (allPrices.length == 0) {
+        allPrices[0] = (newPrice);
+      } else {
+        // TODO: binary search
+        for (var i = 0; i < allPrices.length; i++) {
+          var price = allPrices[i];
+          if (price.price < newPrice.price) {
+            allPrices.splice(i, 0, newPrice);
+            break
+          }
+          if (i == allPrices.length - 1) {
+            allPrices[allPrices.length] = (newPrice);
+            break;
+          }
+        }
+      }
+      
+      
+      
 
       $scope.prices = allPrices.slice(0, 25);
 
@@ -68,10 +76,10 @@ angular.module('trader', [ 'AngularStomp' ]).controller('TraderCtrl', function($
     if ($scope.prices) {
       doChart($scope.prices);
     }
-    console.log(allPrices.length);
-    console.log($scope.prices.length);
-    console.log(Object.keys(priceMap).length);
-    console.log("-----------")
+
+    console.log(count);
+    count = 0;
+    
   }, 1000);
 
   // ///////////////////////Charting Disaster Area//////////////////////////////
