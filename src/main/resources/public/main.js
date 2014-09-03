@@ -4,14 +4,11 @@ angular.module('trader', [ 'AngularStomp' ]).controller('TraderCtrl', function($
   var allPrices = [];
   var priceMap = {};
 
-  var count = 0;
-  
+
   $scope.messages = [];
   $scope.client = ngstomp('/socket');
   $scope.client.connect("guest", "guest", function() {
     $scope.client.subscribe("/topic/price.stock.*", function(message) {
-      count++;
-      
       var priceData = JSON.parse(message.body);
       var exists = true
       if (!priceMap[priceData.emoticon]) {
@@ -20,7 +17,6 @@ angular.module('trader', [ 'AngularStomp' ]).controller('TraderCtrl', function($
       }
       priceMap[priceData.emoticon].price = priceData.price;
       var newPrice = priceMap[priceData.emoticon];
-
 
       if(exists){
         for(var i = 0; i < allPrices.length; i++){
@@ -32,9 +28,6 @@ angular.module('trader', [ 'AngularStomp' ]).controller('TraderCtrl', function($
         }
       }
 
-      
-      
-      
       if (allPrices.length == 0) {
         allPrices[0] = (newPrice);
       } else {
@@ -51,12 +44,12 @@ angular.module('trader', [ 'AngularStomp' ]).controller('TraderCtrl', function($
           }
         }
       }
-      
-      
-      
 
       $scope.prices = allPrices.slice(0, 25);
 
+    });
+    $scope.client.subscribe("/topic/channelstats", function(message) {
+      $scope.channelStats = JSON.parse(message.body);
     });
   }, function() {
   }, '/');
@@ -76,10 +69,6 @@ angular.module('trader', [ 'AngularStomp' ]).controller('TraderCtrl', function($
     if ($scope.prices) {
       doChart($scope.prices);
     }
-
-    console.log(count);
-    count = 0;
-    
   }, 1000);
 
   // ///////////////////////Charting Disaster Area//////////////////////////////

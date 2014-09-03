@@ -2,7 +2,6 @@ package com.timelessname.server.service;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -10,13 +9,12 @@ import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.core.MessageSendingOperations;
-import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import com.google.common.collect.Maps;
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
-import com.timelessname.server.domain.ChannelData;
+import com.timelessname.server.domain.ChannelStats;
 import com.timelessname.server.domain.Emoticon;
 import com.timelessname.server.domain.EmoticonPrice;
 import com.timelessname.server.domain.EmoticonRate;
@@ -35,19 +33,12 @@ public class PricingService {
 
   protected Gson gson = new Gson();
 
-  List<EmoticonRate> emoticonPrices;
-
-  List<ChannelData> channelDatas;
-
   Map<String, EmoticonPrice> priceMap = Maps.newConcurrentMap();
   
-  public List<EmoticonRate> getPrices() {
-    return emoticonPrices;
-  }
-
-  public List<ChannelData> getChannelDatas() {
-    return channelDatas;
-  }
+  List<EmoticonRate> prices;
+  
+  List<ChannelStats> channelStats;
+  
 
   public void priceMessage(String json) {
     Type listType = new TypeToken<ArrayList<EmoticonRate>>() {
@@ -55,10 +46,10 @@ public class PricingService {
     }.getType();
     List<EmoticonRate> newPrices = gson.fromJson(json, listType);
     process(newPrices);
+    prices = newPrices;
   }
 
   private void process(List<EmoticonRate> newPrices) {
-    //Map<String, EmoticonPrice> newPriceMap = Maps.newHashMap();
     for (EmoticonRate emoticonRate : newPrices) {     
       EmoticonPrice emoticonPrice = priceMap.get(emoticonRate.getEmoticon());
       if(emoticonPrice == null){
@@ -70,23 +61,37 @@ public class PricingService {
         emoticonPrice.setPrice(emoticonRate.getPerMinute());
         messagingTemplate.convertAndSend("/topic/price.stock." + emoticonPrice.getEmoticon(), emoticonPrice);
       }
-      
-      
     }
-    
   }
 
   public void channelMessage(String json) {
-    Type listType = new TypeToken<ArrayList<ChannelData>>() {
+    Type listType = new TypeToken<ArrayList<ChannelStats>>() {
       private static final long serialVersionUID = 1L;
     }.getType();
-    channelDatas = gson.fromJson(json, listType);
-  }
-
-  @Scheduled(fixedDelay=1000)
-  public void sendQuotes() {
-
+    List<ChannelStats> newStats = gson.fromJson(json, listType);
+    if(channelStats == null){
+      channelStats = newStats;
+      return;
+    }
     
+    boolean changes = false;
+    for (int i = 0; i < newStats.size() && i < channelStats.size(); i++) {
+      if(!newStats.get(i).equals(channelStats.get(i))){
+        changes = true;
+        break;
+      }
+    }
+    if(changes){
+      messagingTemplate.convertAndSend("/topic/channelstats", newStats);
+    }
+
+    channelStats = newStats;
   }
+
+  public List<EmoticonRate> getPrices() {
+    return prices;
+  }
+
+
   
 }

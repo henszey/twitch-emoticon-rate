@@ -20,30 +20,27 @@ import com.timelessname.server.service.PricingService;
 @Configuration
 public class RabbitConfig {
 
-
-
   String priceQueueName = UUID.randomUUID().toString();
-  String priceExchangeName = "twitch.emoticons.rate";
-
+  String priceExchangeName = "twitch.rate";
 
   @Bean
   Queue priceQueue() {
-    return new Queue(priceQueueName,false,false,true);
+    return new Queue(priceQueueName, false, false, true);
   }
 
   @Bean
   TopicExchange priceExchange() {
-    return new TopicExchange(priceExchangeName,true,false);
+    return new TopicExchange(priceExchangeName, true, false);
   }
 
   @Bean
   Binding priceBinding(Queue priceQueue, TopicExchange priceExchange) {
     return BindingBuilder.bind(priceQueue).to(priceExchange).with("twitch.rate.emoticons");
   }
-  
 
   @Bean
-  SimpleMessageListenerContainer priceContainer(ConnectionFactory connectionFactory, MessageListenerAdapter priceListenerAdapter) {
+  SimpleMessageListenerContainer priceContainer(ConnectionFactory connectionFactory,
+      MessageListenerAdapter priceListenerAdapter) {
     SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
     container.setConnectionFactory(connectionFactory);
     container.setQueueNames(priceQueueName);
@@ -56,31 +53,28 @@ public class RabbitConfig {
   MessageListenerAdapter priceListenerAdapter(PricingService coreService) {
     return new MessageListenerAdapter(coreService, "priceMessage");
   }
-  
-  
-  /*
-  String channelQueueName = "twitch.main.consumer";
-  String channelExchangeName = "twitch.channelData";
 
+  String channelQueueName = UUID.randomUUID().toString();
+  String channelExchangeName = "twitch.rate";
 
   @Bean
   Queue channelQueue() {
-    return new Queue(channelQueueName,false,false,true);
+    return new Queue(channelQueueName, false, false, true);
   }
 
   @Bean
-  FanoutExchange channelExchange() {
-    return new FanoutExchange(channelExchangeName,false,false);
+  TopicExchange channelExchange() {
+    return new TopicExchange(channelExchangeName, true, false);
   }
 
   @Bean
-  Binding channelBinding(Queue channelQueue, FanoutExchange channelExchange) {
-    return BindingBuilder.bind(channelQueue).to(channelExchange);
+  Binding channelBinding(Queue channelQueue, TopicExchange channelExchange) {
+    return BindingBuilder.bind(channelQueue).to(channelExchange).with("twitch.rate.channels");
   }
-  
 
   @Bean
-  SimpleMessageListenerContainer channelContainer(ConnectionFactory connectionFactory, MessageListenerAdapter channelListenerAdapter) {
+  SimpleMessageListenerContainer channelContainer(ConnectionFactory connectionFactory,
+      MessageListenerAdapter channelListenerAdapter) {
     SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
     container.setConnectionFactory(connectionFactory);
     container.setQueueNames(channelQueueName);
@@ -93,11 +87,5 @@ public class RabbitConfig {
   MessageListenerAdapter channelListenerAdapter(PricingService coreService) {
     return new MessageListenerAdapter(coreService, "channelMessage");
   }
-*/
-  
-  
-  
 
-  
-  
 }
