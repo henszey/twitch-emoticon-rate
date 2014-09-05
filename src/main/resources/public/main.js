@@ -45,11 +45,18 @@ angular.module('trader', [ 'AngularStomp' ]).controller('TraderCtrl', function($
         }
       }
 
-      $scope.prices = allPrices.slice(0, 25);
+      $scope.prices = allPrices.slice(0, 20);
 
     });
     $scope.client.subscribe("/topic/channelstats", function(message) {
       $scope.channelStats = JSON.parse(message.body);
+    });
+    $scope.messages = [];
+    $scope.client.subscribe("/topic/chat.*.message", function(message) {
+      $scope.messages.push(JSON.parse(message.body));
+      if($scope.messages.length > 10){
+        $scope.messages.splice(0,1);
+      }
     });
   }, function() {
   }, '/');

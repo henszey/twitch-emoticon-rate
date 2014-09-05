@@ -54,6 +54,8 @@ public class RabbitConfig {
     return new MessageListenerAdapter(coreService, "priceMessage");
   }
 
+  //////////////////////////////////////////////////////////////////////////
+  
   String channelQueueName = UUID.randomUUID().toString();
   String channelExchangeName = "twitch.rate";
 
@@ -87,5 +89,42 @@ public class RabbitConfig {
   MessageListenerAdapter channelListenerAdapter(PricingService coreService) {
     return new MessageListenerAdapter(coreService, "channelMessage");
   }
+  
+  //////////////////////////////////////////////////////////////////////////
+  
+  String chatQueueName = UUID.randomUUID().toString();
+  String chatExchangeName = "twitch.chat";
+
+  @Bean
+  Queue chatQueue() {
+    return new Queue(chatQueueName, false, false, true);
+  }
+
+  @Bean
+  TopicExchange chatExchange() {
+    return new TopicExchange(chatExchangeName, true, false);
+  }
+
+  @Bean
+  Binding chatBinding(Queue chatQueue, TopicExchange chatExchange) {
+    return BindingBuilder.bind(chatQueue).to(chatExchange).with("#");
+  }
+
+  @Bean
+  SimpleMessageListenerContainer chatContainer(ConnectionFactory connectionFactory,
+      MessageListenerAdapter chatListenerAdapter) {
+    SimpleMessageListenerContainer container = new SimpleMessageListenerContainer();
+    container.setConnectionFactory(connectionFactory);
+    container.setQueueNames(chatQueueName);
+    container.setMessageListener(chatListenerAdapter);
+    container.setAcknowledgeMode(AcknowledgeMode.NONE);
+    return container;
+  }
+
+  @Bean
+  MessageListenerAdapter chatListenerAdapter(PricingService coreService) {
+    return new MessageListenerAdapter(coreService, "chatMessage");
+  }
+  
 
 }

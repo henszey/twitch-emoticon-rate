@@ -18,6 +18,7 @@ import com.timelessname.server.domain.ChannelStats;
 import com.timelessname.server.domain.Emoticon;
 import com.timelessname.server.domain.EmoticonPrice;
 import com.timelessname.server.domain.EmoticonRate;
+import com.timelessname.server.domain.Message;
 
 @Service
 public class PricingService {
@@ -86,6 +87,18 @@ public class PricingService {
     }
 
     channelStats = newStats;
+  }
+  
+  public void chatMessage(String json){
+    Message message = gson.fromJson(json, Message.class);
+    if(channelStats != null && channelStats.size() > 0){
+      ChannelStats channelStat = channelStats.get(0);
+      if(message.getChannel().equalsIgnoreCase(channelStat.getChannel())){
+        messagingTemplate.convertAndSend("/topic/chat."+message.getChannel()+".message", message);
+      }
+    }
+
+    
   }
 
   public List<EmoticonRate> getPrices() {
