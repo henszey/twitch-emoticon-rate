@@ -1,9 +1,12 @@
 buildscript {
   repositories {
+    maven {
+      url 'http://repo.spring.io/milestone'
+    }
     mavenCentral()
     maven { url "http://repo.spring.io/plugins-release" }
   }
-  dependencies {  classpath("org.springframework.boot:spring-boot-gradle-plugin:1.1.5.RELEASE")  }
+  dependencies {  classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.0.M1")  }
 }
 
 apply plugin: "java"
@@ -20,6 +23,9 @@ jar {
 }
 
 repositories {
+  maven {
+    url 'http://repo.spring.io/milestone'
+  }
   mavenCentral()
   maven { url "http://repo.spring.io/libs-release" }
 }
@@ -43,4 +49,3 @@ dependencies {
 
 }
 
-task wrapper(type: Wrapper) {  gradleVersion = "2.0"  }

@@ -18,12 +18,12 @@ import com.timelessname.server.domain.Emoticon;
 @Configuration
 public class EmoticonConfig {
 
-  @Autowired
-  Gson gson;
 
   @SuppressWarnings({ "rawtypes", "unchecked" })
   @Bean
   public Map<String, Emoticon> emoticonMap() throws Exception {
+    
+    Gson gson = new Gson();
 
     Map<String, Emoticon> map = new HashMap();
 
@@ -67,9 +67,6 @@ public class EmoticonConfig {
     return list;
   }
 
-  @Bean
-  public Gson gson() {
-    return new Gson();
-  }
+
 
 }
