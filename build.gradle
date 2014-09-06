@@ -38,9 +38,14 @@ dependencies {
   compile("org.springframework.boot:spring-boot-starter-amqp")
 
   compile("org.springframework:spring-messaging")
+  
+  
+  compile("org.springframework.boot:spring-boot-starter-actuator")
+  
 
   compile("org.projectreactor.spring:reactor-spring-context")
   
+
   compile('com.google.code.gson:gson:2.2.4')
   compile('pircbot:pircbot:1.5.0')
   compile('org.apache.commons:commons-io:1.3.2')
