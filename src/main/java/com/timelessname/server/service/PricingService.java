@@ -8,12 +8,15 @@ import java.util.Map;
 import javax.annotation.Resource;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.messaging.core.MessageSendingOperations;
 import org.springframework.stereotype.Service;
 
 import com.google.common.collect.Maps;
 import com.google.common.reflect.TypeToken;
 import com.google.gson.Gson;
+import com.timelessname.server.domain.ChannelRecord;
+import com.timelessname.server.domain.ChannelRecordRepository;
 import com.timelessname.server.domain.ChannelStats;
 import com.timelessname.server.domain.Emoticon;
 import com.timelessname.server.domain.EmoticonPrice;
@@ -24,8 +27,12 @@ import com.timelessname.server.domain.Message;
 public class PricingService {
 
   @Autowired
+  @Qualifier("brokerMessagingTemplate")
   protected MessageSendingOperations<String> messagingTemplate;
     
+  @Autowired
+  RecordService recordService;
+  
   @Resource
   protected Map<String, Emoticon> emoticonMap;
 
@@ -40,8 +47,12 @@ public class PricingService {
   
   List<ChannelStats> channelStats;
   
+  @Autowired
+  ChannelRecordRepository channelRecordRepository;
+  
 
   public void priceMessage(String json) {
+  	
     Type listType = new TypeToken<ArrayList<EmoticonRate>>() {
       private static final long serialVersionUID = 1L;
     }.getType();
@@ -83,8 +94,21 @@ public class PricingService {
       }
     }
     if(changes){
+    	
+    	for (ChannelStats channelStats : newStats) {
+    		ChannelRecord channelRecord = channelRecordRepository.findByChannelNameAndEmoteName(channelStats.getChannel(), channelStats.getTopEmote());
+    		channelStats.setChannelRecord(channelRecord);
+    		ChannelRecord topChannelRecord = channelRecordRepository.findTopChannelByEmote(channelStats.getTopEmote());
+    		channelStats.setTopChannelRecord(topChannelRecord);
+			}
+    	
+    	
+    	
+    	
       messagingTemplate.convertAndSend("/topic/channelstats", newStats);
     }
+    
+    recordService.processChannelStats(newStats);
 
     channelStats = newStats;
   }

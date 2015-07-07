@@ -4,6 +4,10 @@ public class ChannelStats {
   String channel;
   int topEmoteCount;
   String topEmote;
+  
+  ChannelRecord channelRecord;
+  
+  ChannelRecord topChannelRecord;
 
   public String getChannel() {
     return channel;
@@ -28,8 +32,24 @@ public class ChannelStats {
   public void setTopEmote(String topEmote) {
     this.topEmote = topEmote;
   }
+  
+  public ChannelRecord getChannelRecord() {
+		return channelRecord;
+	}
 
-  @Override
+	public void setChannelRecord(ChannelRecord channelRecord) {
+		this.channelRecord = channelRecord;
+	}
+
+	public ChannelRecord getTopChannelRecord() {
+		return topChannelRecord;
+	}
+
+	public void setTopChannelRecord(ChannelRecord topChannelRecord) {
+		this.topChannelRecord = topChannelRecord;
+	}
+
+	@Override
   public int hashCode() {
     final int prime = 31;
     int result = 1;

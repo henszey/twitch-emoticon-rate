@@ -42,6 +42,10 @@ body {
   padding-right: 15px;
 }
 
+.channel-name-col {
+  width: 140px;
+  height: 30px;
+}
 
 
 @-webkit-keyframes yellow-fade{
