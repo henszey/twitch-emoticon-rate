@@ -73,11 +73,121 @@
      </tr>
    </table>
    
+   <hr>
+  
+  <table class="record-container">
+    <tr>
+      <td>
+        <h1><img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-ddc6e3a8732cb50f-25x28.png"> Kappa <img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-ddc6e3a8732cb50f-25x28.png"></h1>
+			  <table class="record-table">
+			  	<tr>
+					  <th>Channel</th>
+					  <th>Per Minute</th>
+					  <th>Date</th>
+			  	</tr>
+			  	<tr ng-repeat="record in records.kappa track by record.id">
+			      <td>{{record.channelName}}</td>
+			      <td>{{record.emoteCount}}</td>
+			      <td>{{record.date}}</td>
+			    </tr>
+			  </table>
+      </td>
+
+      <td>
+        <h1><img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-f6c13c7fc0a5c93d-36x30.png"> BibleThump <img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-f6c13c7fc0a5c93d-36x30.png"></h1>
+			  <table class="record-table">
+			  	<tr>
+					  <th>Channel</th>
+					  <th>Per Minute</th>
+					  <th>Date</th>
+			  	</tr>
+			  	<tr ng-repeat="record in records.biblethump track by record.id">
+			      <td>{{record.channelName}}</td>
+			      <td>{{record.emoteCount}}</td>
+			      <td>{{record.date}}</td>
+			    </tr>
+			  </table>
+      </td>
+
+      <td>
+        <h1><img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-60aa1af305e32d49-23x30.png"> Pogchamp <img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-60aa1af305e32d49-23x30.png"></h1>
+			  <table class="record-table">
+			  	<tr>
+					  <th>Channel</th>
+					  <th>Per Minute</th>
+					  <th>Date</th>
+			  	</tr>
+			  	<tr ng-repeat="record in records.pogchamp track by record.id">
+			      <td>{{record.channelName}}</td>
+			      <td>{{record.emoteCount}}</td>
+			      <td>{{record.date}}</td>
+			    </tr>
+			  </table>
+      </td>
+   </tr>
+   <tr>
+      <td>
+        <h1><img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-3a624954918104fe-19x27.png"> Kreygasm <img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-3a624954918104fe-19x27.png"></h1>
+			  <table class="record-table">
+			  	<tr>
+					  <th>Channel</th>
+					  <th>Per Minute</th>
+					  <th>Date</th>
+			  	</tr>
+			  	<tr ng-repeat="record in records.kreygasm track by record.id">
+			      <td>{{record.channelName}}</td>
+			      <td>{{record.emoteCount}}</td>
+			      <td>{{record.date}}</td>
+			    </tr>
+			  </table>
+      </td>
+
+      <td>
+        <h1><img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-18be1a297459453f-36x30.png"> PJSalt <img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-18be1a297459453f-36x30.png"></h1>
+			  <table class="record-table">
+			  	<tr>
+					  <th>Channel</th>
+					  <th>Per Minute</th>
+					  <th>Date</th>
+			  	</tr>
+			  	<tr ng-repeat="record in records.pjsalt track by record.id">
+			      <td>{{record.channelName}}</td>
+			      <td>{{record.emoteCount}}</td>
+			      <td>{{record.date}}</td>
+			    </tr>
+			  </table>
+      </td>
+
+      <td>
+        <h1><img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-9f276ed33053ec70-32x32.png"> SMOrc <img src="http://static-cdn.jtvnw.net/jtv_user_pictures/chansub-global-emoticon-9f276ed33053ec70-32x32.png"></h1>
+			  <table class="record-table">
+			  	<tr>
+					  <th>Channel</th>
+					  <th>Per Minute</th>
+					  <th>Date</th>
+			  	</tr>
+			  	<tr ng-repeat="record in records.smorc track by record.id">
+			      <td>{{record.channelName}}</td>
+			      <td>{{record.emoteCount}}</td>
+			      <td>{{record.date}}</td>
+			    </tr>
+			  </table>
+      </td>
+    </tr>
+  </table>
+  
+
+   <hr>
+
+   
+   
+   
    <h1>Notes</h1>
    <ul>
      <li>Only one instance of an emote per twitch chat message sent is counted. i.e. "Timmy: Kappa Kappa Kappa" counts as one.</li>
      <li>Records have been collected since July 1st 2015</li>
-     <li>Only the top 200 active channels are monitored.</li>
+     <li>Only the top ~200 active channels are monitored.</li>
+     <li>Yes I really used tables for layout.</li>
    </ul>
    
   
@@ -118,7 +228,9 @@
                 </tbody>
               </table>
               -->
-<h1>?</h1>
+
+<hr>
+<h1>-</h1>
 <iframe frameborder="0" 
         scrolling="no" 
         id="chat_embed" 

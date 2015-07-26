@@ -68,6 +68,7 @@ angular.module('trader', [ 'AngularStomp' ]).controller('TraderCtrl', function($
   }, function() {
   }, '/');
 
+
   $http.get('/emoticons.json').success(function(data) {
     var emoticonMap = {};
     for ( var key in data.emoticons) {
@@ -84,6 +85,29 @@ angular.module('trader', [ 'AngularStomp' ]).controller('TraderCtrl', function($
       doChart($scope.prices);
     }
   }, 1000);
+    
+  $scope.records = {};
+  
+  $http.get('/api/emotes/kappa').success(function(data) {
+  	$scope.records.kappa = data;
+  });  
+  $http.get('/api/emotes/biblethump').success(function(data) {
+  	$scope.records.biblethump = data;
+  });  
+  $http.get('/api/emotes/pogchamp').success(function(data) {
+  	$scope.records.pogchamp = data;
+  });  
+  $http.get('/api/emotes/kreygasm').success(function(data) {
+  	$scope.records.kreygasm = data;
+  });  
+  $http.get('/api/emotes/pjsalt').success(function(data) {
+  	$scope.records.pjsalt = data;
+  });
+  $http.get('/api/emotes/smorc').success(function(data) {
+  	$scope.records.smorc = data;
+  });
+  
+  
 
   // ///////////////////////Charting Disaster Area//////////////////////////////
   var canvas = document.getElementById("c");

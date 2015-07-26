@@ -19,12 +19,16 @@ public class RecordController {
 	ChannelRecordRepository channelRecordRepository;
 	
 	@ResponseBody
-	@RequestMapping("/api/records/{channel}/{emote}")
+	@RequestMapping("/api/channels/{channel}/{emote}")
 	public Object records(@PathVariable String channel, @PathVariable String emote){
-		System.out.println(channel);
-		System.out.println(emote);
-		System.out.println(channelRecordRepository.findByChannelNameAndEmoteName(channel, emote));
 		return channelRecordRepository.findByChannelNameAndEmoteName(channel, emote);
 	}
+	
+	@ResponseBody
+	@RequestMapping("/api/emotes/{emote}")
+	public Object recordsz(@PathVariable String emote){
+		return channelRecordRepository.findTopChannelsByEmote(emote);
+	}
+	
 	
 }
